@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistik - FitiFren</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffebee 0%, #e3f2fd 100%);
+            min-height: 100vh;
+        }
+        
+        .cute-gradient {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+        }
+        
+        .bubble {
+            border-radius: 50px 50px 50px 5px;
+        }
+        
+        .cute-shadow {
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.15);
+        }
+        
+        .animate-bounce-slow {
+            animation: bounce-slow 3s infinite;
+        }
+        
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .progress-ring {
+            transition: stroke-dashoffset 0.5s ease-in-out;
+        }
+        
+        .stat-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(255, 105, 180, 0.2);
+        }
+        
+        .chart-bar {
+            transition: height 0.5s ease-in-out;
+        }
+        
+        .badge {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="cute-gradient text-white py-4 px-6 sticky top-0 z-50">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center cute-shadow">
+                    <span class="text-pink-500 text-xl">💪</span>
+                </div>
+                <h1 class="text-2xl font-bold">FitiFren</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-6">
+                <a href="#overview" class="hover:text-yellow-200 transition-colors">Overview</a>
+                <a href="#progress" class="hover:text-yellow-200 transition-colors">Progress</a>
+                <a href="#achievements" class="hover:text-yellow-200 transition-colors">Pencapaian</a>
+            </nav>
+            <div class="btn"> 
+           <a <button class="bg-white text-pink-500 px-4 py-2 rounded-full font-semibold cute-shadow hover:scale-105 transition-transform" href="sellow.html">
+                Profil Saya
+            </button>
+            </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-12 px-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-pink-600 mb-6 animate-bounce-slow">
+                Yuk, Lihat Progress Sehatmu! 📊
+            </h2>
+            <p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+                Lihat bagaimana setiap langkah kecil membawamu semakin dekat ke tujuan fitnessmu. 
+                Kamu sudah luar biasa! 🌟
+            </p>
+        </div>
+    </section>
+
+    <!-- Overview Stats -->
+    <section id="overview" class="py-12 px-6">
+        <div class="container mx-auto">
+            <h3 class="text-2xl md:text-3xl font-bold text-center text-pink-600 mb-8">
+                Ringkasan Minggu Ini
+            </h3>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- Steps Card -->
+                <div class="stat-card bg-white p-6 rounded-2xl cute-shadow text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-pink-100 rounded-full flex items-center justify-center">
+                        <span class="text-2xl text-pink-600">👣</span>
+                    </div>
+                    <h4 class="font-semibold text-lg mb-2">Total Langkah</h4>
+                    <p class="text-3xl font-bold text-pink-600 mb-2">68,542</p>
+                    <p class="text-sm text-gray-600">+12% dari minggu lalu</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mt-3">
+                        <div class="bg-pink-500 h-2 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Calories Card -->
+                <div class="stat-card bg-white p-6 rounded-2xl cute-shadow text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center">
+                        <span class="text-2xl text-orange-600">🔥</span>
+                    </div>
+                    <h4 class="font-semibold text-lg mb-2">Kalori Terbakar</h4>
+                    <p class="text-3xl font-bold text-orange-600 mb-2">2,348</p>
+                    <p class="text-sm text-gray-600">+8% dari minggu lalu</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mt-3">
+                        <div class="bg-orange-500 h-2 rounded-full" style="width: 70%"></div>
+                    </div>
+                </div>
+
+                <!-- Workout Card -->
+                <div class="stat-card bg-white p-6 rounded-2xl cute-shadow text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+                        <span class="text-2xl text-blue-600">💪</span>
+                    </div>
+                    <h4 class="font-semibold text-lg mb-2">Sesi Workout</h4>
+                    <p class="text-3xl font-bold text-blue-600 mb-2">12</p>
+                    <p class="text-sm text-gray-600">+3 dari minggu lalu</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mt-3">
+                        <div class="bg-blue-500 h-2 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <!-- Sleep Card -->
+                <div class="stat-card bg-white p-6 rounded-2xl cute-shadow text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
+                        <span class="text-2xl text-purple-600">😴</span>
+                    </div>
+                    <h4 class="font-semibold text-lg mb-2">Rata-rata Tidur</h4>
+                    <p class="text-3xl font-bold text-purple-600 mb-2">7.2h</p>
+                    <p class="text-sm text-gray-600">+0.5h dari minggu lalu</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mt-3">
+                        <div class="bg-purple-500 h-2 rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Charts -->
+    <section id="progress" class="py-12 bg-white px-6">
+        <div class="container mx-auto">
+            <h3 class="text-2xl md:text-3xl font-bold text-center text-pink-600 mb-12">
+                Progress 7 Hari Terakhir
+            </h3>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Steps Chart -->
+                <div class="bg-pink-50 p-6 rounded-2xl cute-shadow">
+                    <h4 class="font-semibold text-lg mb-6 text-center">Trend Langkah Harian 👣</h4>
+                    <div class="flex items-end justify-between h-40">
+                        <div class="flex flex-col items-center">
+                            <div class="chart-bar bg-pink-400 w-8 rounded-t" style="height: 60px;"></div>
+                            <span class="text-xs mt-2">Sen</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="chart-bar bg-pink-400 w-8 rounded-t" style="height: 75px;"></div>
+                            <span class="text-xs mt-2">Sel</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="chart-bar bg-pink-500 w-8 rounded-t" style="height: 85px;"></div>
+                            <span class="text-xs mt-2">Rab</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="chart-bar bg-pink-500 w-8 rounded-t" style="height: 90px;"></div>
+                            <span class="text-xs mt-2">Kam</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="chart-bar bg-pink-600 w-8 rounded-t" style="height: 95px;"></div>
+                            <span class="text-xs mt-2">Jum</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="chart-bar bg-pink-600 w-8 rounded-t" style="height: 100px;"></div>
+                            <span class="text-xs mt-2">Sab</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="chart-bar bg-pink-700 w-8 rounded-t" style="height: 105px;"></div>
+                            <span class="text-xs mt-2">Min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workout Chart -->
+                <div class="bg-blue-50 p-6 rounded-2xl cute-shadow">
+                    <h4 class="font-semibold text-lg mb-6 text-center">Durasi Workout 💪</h4>
+                    <div class="flex items-end justify-between h-40">
+                        <div class="flex flex-col items-center">
+                            <div class="chart-bar bg-blue-400 w-8 rounded-t" style="height: 45px;"></div>
+                            <span class="text-xs mt-2">Sen</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="chart-bar bg-blue-400 w-8 rounded-t" style="height: 50px;"></div>
+                            <span class="text-xs mt-2">Sel</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="chart-bar bg-blue-500 w-8 rounded-t" style="height: 65px;"></div>
+                            <span class="text-xs mt-2">Rab</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="chart-bar bg-blue-500 w-8 rounded-t" style="height: 70px;"></div>
+                            <span class="text-xs mt-2">Kam</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="chart-bar bg-blue-600 w-8 rounded-t" style="height: 80px;"></div>
+                            <span class="text-xs mt-2">Jum</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="chart-bar bg-blue-600 w-8 rounded-t" style="height: 85px;"></div>
+                            <span class="text-xs mt-2">Sab</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="chart-bar bg-blue-700 w-8 rounded-t" style="height: 90px;"></div>
+                            <span class="text-xs mt-2">Min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weekly Comparison -->
+            <div class="bg-gradient-to-r from-pink-100 to-blue-100 p-8 rounded-2xl cute-shadow">
+                <h4 class="font-semibold text-lg mb-6 text-center">Perbandingan Mingguan 📈</h4>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-pink-600 mb-2">+15%</div>
+                        <p class="text-sm text-gray-600">Peningkatan Aktivitas</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-green-600 mb-2">+20%</div>
+                        <p class="text-sm text-gray-600">Konsistensi Workout</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-purple-600 mb-2">+10%</div>
+                        <p class="text-sm text-gray-600">Kualitas Tidur</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-16 bg-pink-50 px-6">
+        <div class="container mx-auto">
+            <h3 class="text-2xl md:text-3xl font-bold text-center text-pink-600 mb-12">
+                Pencapaian & Badge 🏆
+            </h3>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Achievement 1 -->
+                <div class="badge bg-white p-6 rounded-2xl cute-shadow text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center">
+                        <span class="text-3xl">⭐</span>
+                    </div>
+                    <h4 class="font-semibold mb-2">Pemula Berdedikasi</h4>
+                    <p class="text-sm text-gray-600">7 hari workout berturut-turut</p>
+                    <div class="mt-3 text-yellow-500">★ ★ ★ ☆ ☆</div>
+                </div>
+
+                <!-- Achievement 2 -->
+                <div class="badge bg-white p-6 rounded-2xl cute-shadow text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
+                        <span class="text-3xl">🚶‍♂️</span>
+                    </div>
+                    <h4 class="font-semibold mb-2">Jalan Santai</h4>
+                    <p class="text-sm text-gray-600">50,000 langkah dalam seminggu</p>
+                    <div class="mt-3 text-green-500">★ ★ ★ ★ ☆</div>
+                </div>
+
+                <!-- Achievement 3 -->
+                <div class="badge bg-white p-6 rounded-2xl cute-shadow text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+                        <span class="text-3xl">💧</span>
+                    </div>
+                    <h4 class="font-semibold mb-2">Hidrasi Master</h4>
+                    <p class="text-sm text-gray-600">Minum 2L air setiap hari</p>
+                    <div class="mt-3 text-blue-500">★ ★ ★ ★ ★</div>
+                </div>
+
+                <!-- Achievement 4 -->
+                <div class="badge bg-white p-6 rounded-2xl cute-shadow text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
+                        <span class="text-3xl">🌅</span>
+                    </div>
+                    <h4 class="font-semibold mb-2">Early Bird</h4>
+                    <p class="text-sm text-gray-600">Workout pagi 5 hari berturut-turut</p>
+                    <div class="mt-3 text-purple-500">★ ★ ☆ ☆ ☆</div>
+                </div>
+            </div>
+
+            <!-- Next Goals -->
+            <div class="mt-12 bg-white p-8 rounded-2xl cute-shadow">
+                <h4 class="font-semibold text-lg mb-6 text-center">Target Selanjutnya 🎯</h4>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                            <span class="text-xl">🏃‍♀️</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">10K Langkah/Hari</p>
+                            <p class="text-sm text-gray-600">75% tercapai</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                            <span class="text-xl">🥗</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Makan Sehat</p>
+                            <p class="text-sm text-gray-600">5 dari 7 hari</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                            <span class="text-xl">💤</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Tidur 8 Jam</p>
+                            <p class="text-sm text-gray-600">60% tercapai</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
+                            <span class="text-xl">🧘‍♀️</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Yoga Mingguan</p>
+                            <p class="text-sm text-gray-600">2 dari 3 sesi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cute-gradient text-white py-8 px-6">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="hover:text-yellow-200 transition-colors">Tentang Kami</a>
+                <a href="#" class="hover:text-yellow-200 transition-colors">Bantuan</a>
+                <a href="#" class="hover:text-yellow-200 transition-colors">Privasi</a>
+                <a href="#" class="hover:text-yellow-200 transition-colors">Syarat & Ketentuan</a>
+            </div>
+            <p class="text-sm">© 2024 FitiFren - Aplikasi Fitness Lucu. Semua hak dilindungi.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <span class="text-xl">💪</span>
+                <span class="text-xl">❤️</span>
+                <span class="text-xl">🌟</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for chart bars
+        document.addEventListener('DOMContentLoaded', function() {
+            const chartBars = document.querySelectorAll('.chart-bar');
+            
+            chartBars.forEach((bar, index) => {
+                // Set initial height to 0
+                const targetHeight = bar.style.height;
+                bar.style.height = '0px';
+                
+                // Animate to target height
+                setTimeout(() => {
+                    bar.style.height = targetHeight;
+                }, 200 + index * 100);
+            });
+            
+            // Add hover effects to badges
+            const badges = document.querySelectorAll('.badge');
+            badges.forEach(badge => {
+                badge.addEventListener('mouseenter', () => {
+                    badge.style.transform = 'scale(1.05)';
+                });
+                badge.addEventListener('mouseleave', () => {
+                    badge.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

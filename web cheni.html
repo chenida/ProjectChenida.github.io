@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .profile-gradient {
+            background: linear-gradient(135deg, #245789 100%, #8b5cf6 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 font-sans">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-indigo-600">CHENIDA RIRA VERLYTA</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-indigo-600 transition">About</a>
+                    <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition">Skills</a>
+                    <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition">Projects</a>
+                    <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition">Contact</a>
+                </div>
+                <button class="md:hidden text-gray-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero profile-gradient text-white py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <img src="WhatsApp.jpeg"
+                    alt="Professional headshot of John Doe wearing business attire with a modern office background"
+                    class="rounded-full w-64 h-64 object-cover border-4 border-white shadow-lg">
+            </div>
+            <div class="md:w-1/2">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">CHENIDA RIRA VERLYTA</h1>
+                <h2 class="text-2xl md:text-3xl mb-6">Senior Software Engineer</h2>
+                <p class="text-lg mb-8">Building innovative digital experiences that solve real-world problems with
+                    clean, efficient code.</p>
+                <div class="flex space-x-4">
+                    <a href="#contact"
+                        class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Hire
+                        Me</a>
+                    <a href="#"
+                        class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition">Download
+                        CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">About Me</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="text-2xl font-semibold mb-4">Who I Am</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        I am a junior software engineer and data scientist who is eager to gain experience through
+                        internships in building scalable web applications and data science. With a specialization in
+                        JavaScript frameworks, cloud technology, and databases, I enjoy transforming complex problems
+                        into elegant solutions.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        When I'm not coding, you'll find me hiking, reading tech blogs, or mentoring junior developers
+                        in my community.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-indigo-600 mr-2"></i>
+                            <span>chenidarira@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-indigo-600 mr-2"></i>
+                            <span>jangan kepo</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-indigo-600 mr-2"></i>
+                            <span>Indonesia</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-birthday-cake text-indigo-600 mr-2"></i>
+                            <span>May 15, 1990</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4">My Experience</h3>
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-indigo-600 pl-4">
+                            <h4 class="font-bold">Software Engineer</h4>
+                            <p class="text-gray-500">Resource Management. • 2024 - Present</p>
+                            <p class="text-gray-600 mt-2">
+                                System software, such as operating systems, is responsible for managing hardware
+                                resources, including the CPU, memory, and storage devices.
+                            </p>
+                        </div>
+                        <div class="border-l-4 border-indigo-600 pl-4">
+                            <h4 class="font-bold">Software Developer</h4>
+                            <p class="text-gray-500">Needs Analysis. • 2024 - 2025</p>
+                            <p class="text-gray-600 mt-2">
+                                Collect and analyze user and business requirements to determine the specifications of
+                                the software to be developed.
+                            </p>
+                        </div>
+                        <div class="border-l-4 border-indigo-600 pl-4">
+                            <h4 class="font-bold">Junior Developer</h4>
+                            <p class="text-gray-500">Debugging • 2025</p>
+                            <p class="text-gray-600 mt-2">
+                                Searching for and fixing errors in written code. Junior Developers often learn how to
+                                use debugging tools and troubleshooting techniques.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">My Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Technical Skills -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition">
+                    <div class="text-indigo-600 mb-4">
+                        <i class="fas fa-code text-3xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Technical</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                            <span>JavaScript/TypeScript</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                            <span>Python</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                            <span>React & Node.js</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                            <span>Database Design</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                            <span>AWS Architecture</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition">
+                    <div class="text-indigo-600 mb-4">
+                        <i class="fas fa-comments text-3xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Soft Skills</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                            <span>Team Leadership</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                            <span>Problem Solving</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                            <span>Effective Communication</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                            <span>Project Management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                            <span>Mentoring</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tools -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition">
+                    <div class="text-indigo-600 mb-4">
+                        <i class="fas fa-tools text-3xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Tools</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                            <span>Git/GitHub</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                            <span>Docker & Kubernetes</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                            <span>VS Code</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                            <span>JIRA/Confluence</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                            <span>Figma</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Languages -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition">
+                    <div class="text-indigo-600 mb-4">
+                        <i class="fas fa-language text-3xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Languages</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                            <span>English (Fluent)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                            <span>Spanish (Intermediate)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-600 rounded-full mr-2"></div>
+                            <span>French (Basic)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition border border-gray-200">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7e2d981b-991a-4248-bb7e-f4beb59c3505.png"
+                        alt="E-commerce dashboard interface showing analytics charts and product listings"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">E-Commerce Platform</h3>
+                        <p class="text-gray-600 mb-4">
+                            Full-featured online store with payment processing, inventory management, and analytics.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">React</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Node.js</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">MongoDB</span>
+                        </div>
+                        <div class="btn">
+                            <a href="yeah.html"
+                                class="text-indigo-600 font-semibold hover:text-indigo-800 transition">View Project
+                                →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition border border-gray-200">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/44a9312d-cd48-4ed9-ac3b-a9a760e70fcb.png"
+                        alt="Mobile app interface showing fitness tracking with workout statistics"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Fitness Tracking App</h3>
+                        <p class="text-gray-600 mb-4">
+                            Cross-platform mobile app for workout tracking with AI-powered recommendations.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">React Native</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Firebase</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">TensorFlow.js</span>
+                        </div>
+                        <div class="btn">
+                            <a href="yeah2.html"
+                                class="text-indigo-600 font-semibold hover:text-indigo-800 transition">View Project
+                                →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition border border-gray-200">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/de583cf5-4653-4e12-bbb4-4f4a16563246.png"
+                        alt="Enterprise dashboard showing multiple data visualizations and metrics"
+                        class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Enterprise SaaS Dashboard</h3>
+                        <p class="text-gray-600 mb-4">
+                            Customizable business intelligence platform with real-time data visualization.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Angular</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Python</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">AWS</span>
+                        </div>
+                        <div class="btn">
+                            <a href="halo.html"
+                                class="text-indigo-600 font-semibold hover:text-indigo-800 transition">View Project
+                                →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#"
+                    class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">View
+                    All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Get In Touch</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-indigo-600 mt-1 mr-4">
+                                <i class="fas fa-envelope text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Email</h4>
+                                <p class="text-gray-600">chenidarira@gmail</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-indigo-600 mt-1 mr-4">
+                                <i class="fas fa-phone-alt text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Phone</h4>
+                                <p class="text-gray-600">0000000</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-indigo-600 mt-1 mr-4">
+                                <i class="fas fa-map-marker-alt text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Location</h4>
+                                <p class="text-gray-600">Indonesia, soul sumatera</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-12">
+                        <h4 class="font-semibold mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="#"
+                                class="bg-white p-3 rounded-full text-indigo-600 hover:bg-indigo-100 transition">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                            <a href="instagram.html"
+                                class="bg-white p-3 rounded-full text-indigo-600 hover:bg-indigo-100 transition">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="#"
+                                class="bg-white p-3 rounded-full text-indigo-600 hover:bg-indigo-100 transition">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#"
+                                class="bg-white p-3 rounded-full text-indigo-600 hover:bg-indigo-100 transition">
+                                <i class="fab fa-medium text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <form class="bg-white p-8 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-semibold mb-6">Send Me a Message</h3>
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="6"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-indigo-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold">CHENIDA RIRA VERLYTA</a>
+                    <p class="mt-2 text-gray-400">Building digital experiences that matter</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">About</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Projects</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Blog</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2024 CHENIDA RIRA VERLYTA. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-medium text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop"
+        class="fixed bottom-6 right-6 bg-indigo-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-opacity duration-300 hover:bg-indigo-700">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Mobile menu toggle would go here
+    </script>
+</body>
+
+</html>
